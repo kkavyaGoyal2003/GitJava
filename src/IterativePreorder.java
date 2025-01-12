@@ -1,4 +1,3 @@
-package January2025;
 import java.util.*;
 public class IterativePreorder {
     static class TreeNode{
