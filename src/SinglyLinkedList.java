@@ -1,19 +1,19 @@
-class NodeCreate {
+class Node {
     int value;
-    NodeCreate next;
+    Node2 next;
 
-    NodeCreate(int value) {
+    Node(int value) {
         this.value = value;
         next = null;
     }
 }
 class SinglyLL {
-    NodeCreate head;
-    NodeCreate temp;
+    Node2 head;
+    Node2 temp;
     int size;
 
     void insetFirst(int value) {
-        NodeCreate node = new NodeCreate(value);
+        Node2 node = new Node2(value);
         if(size == 0) {
             head = node;
             temp = node;
@@ -24,7 +24,7 @@ class SinglyLL {
         size++;
     }
     void insertLast(int value) {
-        NodeCreate node = new NodeCreate(value);
+        Node2 node = new Node2(value);
         if(size == 0) {
             head = node;
             temp = node;
@@ -38,8 +38,8 @@ class SinglyLL {
         if(index == 0) {
             insetFirst(value);
         } else {
-            NodeCreate node = new NodeCreate(value);
-            NodeCreate nodepos = head;
+            Node2 node = new Node2(value);
+            Node2 nodepos = head;
             int count = 1;
             while(count < index) {
                 nodepos = nodepos.next;
@@ -73,7 +73,7 @@ class SinglyLL {
             head = null;
             temp = null;
         } else {
-            NodeCreate node = head;
+            Node2 node = head;
             while (node.next != null && node.next.next != null) {
                 node = node.next;
             }
@@ -90,7 +90,7 @@ class SinglyLL {
         if(index == 0) {
             return deleteFirst();
         } else {
-            NodeCreate nodepos = head;
+            Node2 nodepos = head;
             int count = 1;
             while(count < index) {
                 nodepos = nodepos.next;
@@ -103,7 +103,7 @@ class SinglyLL {
         return val;
     }
     boolean searchValue(int val){
-        NodeCreate nodepos = head;
+        Node2 nodepos = head;
         while(nodepos != null) {
             if(nodepos.value == val) return true;
             nodepos = nodepos.next;
@@ -111,7 +111,7 @@ class SinglyLL {
         return false;
     }
     void display () {
-        NodeCreate node = head;
+        Node2 node = head;
         while(node != null) {
             System.out.print(node.value + "->");
             node = node.next;
