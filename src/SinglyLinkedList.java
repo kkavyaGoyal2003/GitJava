@@ -1,19 +1,19 @@
-class Node {
+class Node3 {
     int value;
-    Node2 next;
+    Node3 next;
 
-    Node(int value) {
+    Node3(int value) {
         this.value = value;
         next = null;
     }
 }
 class SinglyLL {
-    Node2 head;
-    Node2 temp;
+    Node3 head;
+    Node3 temp;
     int size;
 
     void insetFirst(int value) {
-        Node2 node = new Node2(value);
+        Node3 node = new Node3(value);
         if(size == 0) {
             head = node;
             temp = node;
@@ -24,7 +24,7 @@ class SinglyLL {
         size++;
     }
     void insertLast(int value) {
-        Node2 node = new Node2(value);
+        Node3 node = new Node3(value);
         if(size == 0) {
             head = node;
             temp = node;
@@ -38,8 +38,8 @@ class SinglyLL {
         if(index == 0) {
             insetFirst(value);
         } else {
-            Node2 node = new Node2(value);
-            Node2 nodepos = head;
+            Node3 node = new Node3(value);
+            Node3 nodepos = head;
             int count = 1;
             while(count < index) {
                 nodepos = nodepos.next;
@@ -73,7 +73,7 @@ class SinglyLL {
             head = null;
             temp = null;
         } else {
-            Node2 node = head;
+            Node3 node = head;
             while (node.next != null && node.next.next != null) {
                 node = node.next;
             }
@@ -90,7 +90,7 @@ class SinglyLL {
         if(index == 0) {
             return deleteFirst();
         } else {
-            Node2 nodepos = head;
+            Node3 nodepos = head;
             int count = 1;
             while(count < index) {
                 nodepos = nodepos.next;
@@ -103,7 +103,7 @@ class SinglyLL {
         return val;
     }
     boolean searchValue(int val){
-        Node2 nodepos = head;
+        Node3 nodepos = head;
         while(nodepos != null) {
             if(nodepos.value == val) return true;
             nodepos = nodepos.next;
@@ -111,7 +111,7 @@ class SinglyLL {
         return false;
     }
     void display () {
-        Node2 node = head;
+        Node3 node = head;
         while(node != null) {
             System.out.print(node.value + "->");
             node = node.next;
