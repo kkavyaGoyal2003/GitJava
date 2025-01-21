@@ -29,6 +29,7 @@ class Que{
     int pop() {
         int value = -1;
         if(front == null) {
+            rear = null;
             System.out.println("Queue is empty");
         } else {
             value = front.value;
