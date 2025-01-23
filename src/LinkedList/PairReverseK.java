@@ -40,7 +40,6 @@ class LL4 {
         Node4 newHead = null;
         Node4 temp = head;
         Node4 nextnode = null;
-        Node4 checkNode = temp;
 
         while(temp != null ) {
             Node4 tempHead = temp;
