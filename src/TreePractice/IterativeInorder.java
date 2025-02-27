@@ -1,3 +1,5 @@
+package TreePractice;
+
 import java.util.*;
 public class IterativeInorder {
     static class TreeNode {

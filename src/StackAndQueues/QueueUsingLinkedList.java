@@ -1,5 +1,5 @@
-package LinkedList;
-import java.util.*;
+package StackAndQueues;
+
 class NodeQ {
     int value;
     NodeQ next;

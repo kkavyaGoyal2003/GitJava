@@ -1,3 +1,5 @@
+package TreePractice;
+
 import java.util.*;
 
 class TreeNode {

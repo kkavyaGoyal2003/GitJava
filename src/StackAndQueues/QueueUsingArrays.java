@@ -1,3 +1,5 @@
+package StackAndQueues;
+
 import java.util.*;
 public class QueueUsingArrays {
     static class Queue {

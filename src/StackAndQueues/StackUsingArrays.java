@@ -1,4 +1,4 @@
-package January2025;
+package StackAndQueues;
 import java.util.*;
 
 public class StackUsingArrays {

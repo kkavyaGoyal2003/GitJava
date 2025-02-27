@@ -1,4 +1,8 @@
-package LinkedList;
+package StackAndQueues;
+
+import LinkedList.LL1;
+import LinkedList.Node3;
+
 class Node {
     int data;
     Node3 next;

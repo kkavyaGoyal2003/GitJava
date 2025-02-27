@@ -1,8 +1,7 @@
-package LinkedList;
-import java.util.*;
+package StackAndQueues;
 import java.util.Queue;
 import java.util.LinkedList;
-import  java.util.Iterator;
+
 class Stack {
     Queue<Integer> queue = new LinkedList<>();
     void push(int value) {

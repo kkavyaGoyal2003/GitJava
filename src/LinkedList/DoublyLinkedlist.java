@@ -1,8 +1,10 @@
-class Node1 {
+package LinkedList;
+
+class LinkNode {
     int value;
-    Node1 next;
-    Node1 prev;
-    Node1(int value) {
+    LinkNode next;
+    LinkNode prev;
+    LinkNode(int value) {
         this.value = value;
         next = null;
         prev = null;
@@ -10,11 +12,11 @@ class Node1 {
 }
 class DLL {
     int size = 0;
-    Node1 head = null;
-    Node1 tail = null;
+    LinkNode head = null;
+    LinkNode tail = null;
 
     void insertstart(int val) {
-        Node1 node = new Node1(val);
+        LinkNode node = new LinkNode(val);
         if(head  == null) {
             head = node;
             tail = node;
@@ -26,7 +28,7 @@ class DLL {
         size++;
     }
     void insertEnd(int val) {
-        Node1 node = new Node1(val);
+        LinkNode node = new LinkNode(val);
         if(head  == null) {
             head = node;
             tail = node;
@@ -41,8 +43,8 @@ class DLL {
         if(index == 0) {
             insertstart(value);
         } else {
-            Node1 node = new Node1(value);
-            Node1 temp = head;
+            LinkNode node = new LinkNode(value);
+            LinkNode temp = head;
             int count = 1;
             while(count < index) {
                 temp = temp.next;
@@ -87,7 +89,7 @@ class DLL {
             head = head.next;
             return  val;
         } else {
-            Node1 temp = head;
+            LinkNode temp = head;
             int count = 1;
             while(count < index) {
                 temp = temp.next;
@@ -95,14 +97,14 @@ class DLL {
             }
             val = temp.next.value;
             temp.next = temp.next.next;
-            Node1 temp1 = temp.next;
+            LinkNode temp1 = temp.next;
             temp1.prev = temp1.prev.prev;
         }
         size--;
         return val;
     }
     boolean searchValue(int val) {
-        Node1 temp = head;
+        LinkNode temp = head;
         while(temp != null) {
             if(temp.value == val) return true;
             temp = temp.next;
@@ -113,7 +115,7 @@ class DLL {
         if(head == null) {
             System.out.println("List is empty");
         } else {
-            Node1 temp = head;
+            LinkNode temp = head;
             while(temp != null) {
                 System.out.print(temp.value + " <=> ");
                 temp = temp.next;

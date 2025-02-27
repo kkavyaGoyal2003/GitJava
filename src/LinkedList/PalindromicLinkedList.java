@@ -1,3 +1,5 @@
+package LinkedList;
+
 class Node2 {
     int value;
     Node1 next;
@@ -8,7 +10,7 @@ class Node2 {
     }
 }
 
-class LL  {
+class LinkList {
     int size = 0;
     Node1 head;
     Node1 temp = head;
@@ -71,7 +73,7 @@ class LL  {
 }
 public class PalindromicLinkedList {
     public static void main(String[] args) {
-        LL list = new LL();
+        LinkList list = new LinkList();
         Node1 head = list.insertEnd(1);
         list.insertEnd(2);
         list.insertEnd(3);

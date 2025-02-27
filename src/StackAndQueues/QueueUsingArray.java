@@ -1,5 +1,4 @@
-package LinkedList;
-import java.util.*;
+package StackAndQueues;
 
 class Queue {
     int size = 6;
